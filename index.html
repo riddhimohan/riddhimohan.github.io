@@ -19,7 +19,8 @@
 		href="https://raw.githubusercontent.com/riddhimohan/riddhimohan.github.io/main/assets/images/favicon.ico">
 
 	<script src="https://cdn.tailwindcss.com"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- FIX: Updated Font Awesome CDN to a newer version (6.5.2) to ensure fa-x-twitter icon is available. -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	<!-- Inter Font for professional minimalism -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<style>
@@ -119,7 +120,7 @@
 
 				<a href="#" onclick="navigateTo('home')"
 					class="text-2xl font-bold tracking-tighter text-black hover:opacity-80 transition-opacity">
-					Riddhi Mohan Sharma<span class="text-blue-600"> RMS</span>
+					Riddhi Mohan Sharma<span class="text-blue-600">RMS</span>
 				</a>
 				<p class="text-xs font-medium text-gray-500 mt-2 hidden md:block tracking-wide uppercase">Tech Leadership &
 					Strategy</p>
@@ -168,26 +169,32 @@
 				</li>
 			</ul>
 
-			<!-- Social Footer -->
+			<!-- Social Footer and Copyright -->
 			<div class="mt-12 md:absolute md:bottom-10 md:w-full md:pr-12 pt-8 border-t md:border-t-0 border-gray-100">
-				<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Connect</p>
-				<div class="flex space-x-5">
-					<a href="https://linkedin.com/in/riddhimohansharma" target="_blank"
-						class="text-gray-400 hover:text-[#0077b5] transition-colors" aria-label="LinkedIn"><i
-							class="fa-brands fa-linkedin text-xl"></i></a>
-					<!-- Updated X Handle -->
-					<a href="https://x.com/RiddhiMohanS" target="_blank" class="text-gray-400 hover:text-black transition-colors"
-						aria-label="X / Twitter"><i class="fa-brands fa-x-twitter text-xl"></i></a>
-					<a href="https://medium.com/@riddhimohansharma" target="_blank"
-						class="text-gray-400 hover:text-black transition-colors" aria-label="Medium"><i
-							class="fa-brands fa-medium text-xl"></i></a>
+
+				<!-- Connect Section -->
+				<div class="mb-6">
+					<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Connect</p>
+					<div class="flex space-x-5">
+						<a href="https://linkedin.com/in/riddhimohansharma" target="_blank"
+							class="text-gray-400 hover:text-[#0077b5] transition-colors" aria-label="LinkedIn"><i
+								class="fa-brands fa-linkedin text-xl"></i></a>
+						<!-- X Handle (Should now be visible) -->
+						<a href="https://x.com/RiddhiMohanS" target="_blank"
+							class="text-gray-400 hover:text-black transition-colors" aria-label="X / Twitter"><i
+								class="fa-brands fa-x-twitter text-xl"></i></a>
+						<a href="https://github.com/riddhimohansharma" target="_blank"
+							class="text-gray-400 hover:text-black transition-colors" aria-label="GitHub"><i
+								class="fa-brands fa-github text-xl"></i></a>
+						<a href="https://medium.com" target="_blank" class="text-gray-400 hover:text-black transition-colors"
+							aria-label="Medium"><i class="fa-brands fa-medium text-xl"></i></a>
+					</div>
 				</div>
-			</div>
-			<div class="mt-12 md:absolute md:bottom-10 md:w-full md:pr-12 pt-8 border-t md:border-t-0 border-gray-100">
-				<div class="flex space-x-5"></div>
-				<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">© 2025 Riddhi Mohan Sharma. All
-					rights reserved.</p>
-			</div>
+
+				<!-- Copyright Notice -->
+				<p class="text-[10px] text-gray-400 tracking-wide">
+					© 2025 Riddhi Mohan Sharma. All rights reserved.
+				</p>
 			</div>
 		</nav>
 	</aside>
@@ -377,7 +384,7 @@
 			<div class="max-w-3xl">
 				<h1 class="text-4xl font-bold text-black mb-8 tracking-tight">About Me</h1>
 
-				<!-- New Image Placeholder -->
+				<!-- Image Placeholder -->
 				<div class="mb-12">
 					<!-- USER TO DO: Replace 'src' with your actual image URL for the about page -->
 					<img
@@ -452,13 +459,19 @@
 							class="bg-[#0077b5] text-white px-6 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity">
 							<i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
 						</a>
-						<a href="https://medium.com/@riddhimohansharma" target="_blank"
+						<!-- X / Twitter Button -->
+						<a href="https://x.com/RiddhiMohanS" target="_blank"
 							class="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:opacity-80 transition-opacity">
-							<i class="fa-brands fa-medium mr-2"></i> Medium
+							<i class="fa-brands fa-x-twitter mr-2"></i> X / Twitter
 						</a>
-						<a href="https://x.com/RiddhiMohanS"
+						<!-- GitHub Button -->
+						<a href="https://github.com/riddhimohansharma" target="_blank"
+							class="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:opacity-80 transition-opacity">
+							<i class="fa-brands fa-github mr-2"></i> GitHub
+						</a>
+						<a href="https://medium.com/@riddhimohansharm" target="_blank"
 							class="bg-white border border-gray-300 text-gray-700 px-6 py-2 rounded-md text-sm font-medium hover:border-black hover:text-black transition-colors">
-							Twitter/X
+							<i class="fa-brands fa-medium mr-2"></i> Medium
 						</a>
 					</div>
 				</div>
@@ -548,7 +561,7 @@
                             <li><strong>Verification:</strong> Moving beyond passwords to biometric and behavioral analysis.</li>
                             <li><strong>Privacy:</strong> Leveraging Zero-Knowledge Proofs (ZKPs) to prove eligibility without revealing data.</li>
                             <li><strong>Governance:</strong> Managing the lifecycle of AI agent permissions.</li>
-                        </ul>
+                            </ul>
                         <p>Leading product strategy in this space requires balancing friction with security. The winners in the next decade will be those who make high-assurance identity invisible to the end user.</p>
                     </div>
                 `
@@ -569,7 +582,7 @@
                     </div>
                     <div class="space-y-6 text-gray-800 leading-relaxed">
                         <p class="text-xl font-light">The sun never sets on a truly global engineering team. But without the right culture, timezone differences become bottlenecks rather than force multipliers.</p>
-                        <p>Having led teams across the US, Europe, and Asia, I've found that <strong>asynchronous documentation</strong> is the glue that holds distributed teams together. It's not just about writing code; it's about writing the *context* around the code.</p>
+                        <p>Having led teams across the US, Europe, and Asia, I've found that <strong>asynchronous documentation</strong> is the glue that holds distributed teams together. It’s not just about writing code; it’s about writing the *context* around the code.</p>
                         <h3 class="text-xl font-bold text-black mt-8">Strategies for Success</h3>
                         <p>1. <strong>The Handshake Protocol:</strong> Ensure clear handoffs between timezones to maintain 24/7 velocity.</p>
                         <p>2. <strong>Cultural Intelligence:</strong> Understanding communication styles is just as important as technical prowess. High-context vs. low-context cultures require different management approaches.</p>
@@ -716,23 +729,23 @@
 				listContainer.innerHTML = '<p class="text-gray-500 text-center py-12">No posts found matching your search.</p>';
 			} else {
 				listContainer.innerHTML = postsToShow.map(post => `
-					<article class="group cursor-pointer block" onclick="openArticle(${post.id})">
-						<div class="border-t border-gray-100 pt-8">
-							<div class="flex flex-col sm:flex-row justify-between sm:items-center mb-3">
-								<div class="flex items-center gap-2 mb-2 sm:mb-0">
-									<span class="px-3 py-1 bg-gray-50 text-[10px] uppercase tracking-wide font-bold text-gray-500 rounded-full">${post.tag}</span>
-									<span class="text-xs text-gray-400">${post.readTime}</span>
-								</div>
-								<time class="text-xs text-gray-400 font-mono uppercase">${post.date}</time>
-							</div>
-							<h2 class="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors mb-3">${post.title}</h2>
-							<p class="text-gray-600 mb-4 leading-relaxed">${post.summary}</p>
-							<div class="flex items-center gap-2 text-sm font-medium text-black group-hover:translate-x-1 transition-transform">
-								Read Article <i class="fa-solid fa-arrow-right text-xs"></i>
-							</div>
-						</div>
-					</article>
-				`).join('');
+                <article class="group cursor-pointer block" onclick="openArticle(${post.id})">
+                    <div class="border-t border-gray-100 pt-8">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-3">
+                            <div class="flex items-center gap-2 mb-2 sm:mb-0">
+                                <span class="px-3 py-1 bg-gray-50 text-[10px] uppercase tracking-wide font-bold text-gray-500 rounded-full">${post.tag}</span>
+                                <span class="text-xs text-gray-400">${post.readTime}</span>
+                            </div>
+                            <time class="text-xs text-gray-400 font-mono uppercase">${post.date}</time>
+                        </div>
+                        <h2 class="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors mb-3">${post.title}</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">${post.summary}</p>
+                        <div class="flex items-center gap-2 text-sm font-medium text-black group-hover:translate-x-1 transition-transform">
+                            Read Article <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
 			}
 
 			renderPagination();
