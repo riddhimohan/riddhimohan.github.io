@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Riddhi Mohan Sharma - Transformative Technology Leader & Product Strategist. Expert in AI, Identity, MarTech, and Healthcare. focused on cross-continental impact.">
+	<meta name="keywords"
+		content="Riddhi Mohan Sharma, Engineering Manager, Technical Product Manager, AI Strategy, Tech Leadership, Identity, MarTech, Healthcare">
+	<meta name="author" content="Riddhi Mohan Sharma">
+
+	<title>Riddhi Mohan Sharma | Tech Leadership & AI Strategy</title>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- Inter Font for professional minimalism -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #ffffff;
+			color: #000000;
+		}
+
+		/* Sleek Scrollbar */
+		::-webkit-scrollbar {
+			width: 6px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #f9fafb;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #d1d5db;
+			border-radius: 3px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #9ca3af;
+		}
+
+		/* Transitions */
+		.page-section {
+			display: none;
+			animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.page-section.active {
+			display: block;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(8px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* Typography enhancements */
+		.prose-h1 {
+			letter-spacing: -0.025em;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.02em;
+		}
+
+		#mobile-menu {
+			transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		}
+	</style>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						'brand-black': '#111111',
+						'brand-gray': '#666666',
+						'brand-light': '#f4f4f5',
+					}
+				}
+			}
+		}
+	</script>
+</head>
+
+<body class="flex flex-col md:flex-row min-h-screen selection:bg-black selection:text-white">
+
+	<!-- Sidebar Navigation -->
+	<aside
+		class="w-full md:w-72 md:h-screen md:fixed bg-white border-b md:border-b-0 md:border-r border-gray-100 flex flex-col z-50">
+		<div class="p-6 flex justify-between items-center md:block">
+			<!-- Brand -->
+			<div class="mb-0 md:mb-12">
+				<!-- Profile Photo for Branding -->
+				<div class="hidden md:block mb-6">
+					<!-- USER TO DO: Replace 'src' with your actual photo URL (e.g., from LinkedIn or GitHub) -->
+					<img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Riddhi&backgroundColor=f3f4f6" alt="Riddhi Sharma"
+						class="w-24 h-24 rounded-full object-cover border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+						onclick="navigateTo('about')">
+				</div>
+
+				<a href="#" onclick="navigateTo('home')"
+					class="text-2xl font-bold tracking-tighter text-black hover:opacity-80 transition-opacity">
+					Riddhi Sharma<span class="text-blue-600">.</span>
+				</a>
+				<p class="text-xs font-medium text-gray-500 mt-2 hidden md:block tracking-wide uppercase">Tech Leadership &
+					Strategy</p>
+			</div>
+
+			<!-- Mobile Toggle -->
+			<button id="menu-btn" class="md:hidden text-black focus:outline-none p-2">
+				<i class="fa-solid fa-bars text-xl"></i>
+			</button>
+		</div>
+
+		<!-- Nav Items -->
+		<nav id="mobile-menu"
+			class="px-6 pb-6 md:pb-0 hidden md:block md:flex-grow max-h-0 md:max-h-full opacity-0 md:opacity-100 overflow-hidden md:overflow-visible">
+			<ul class="space-y-5 text-sm font-medium text-gray-500">
+				<li>
+					<a href="#" onclick="navigateTo('home')"
+						class="nav-item flex items-center space-x-3 hover:text-black transition-colors group active-nav text-black"
+						data-target="home">
+						<span class="w-1 h-1 bg-transparent group-hover:bg-black rounded-full transition-colors"
+							id="dot-home"></span>
+						<span>Vision</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigateTo('blog')"
+						class="nav-item flex items-center space-x-3 hover:text-black transition-colors group" data-target="blog">
+						<span class="w-1 h-1 bg-transparent group-hover:bg-black rounded-full transition-colors"></span>
+						<span>Insights</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigateTo('projects')"
+						class="nav-item flex items-center space-x-3 hover:text-black transition-colors group"
+						data-target="projects">
+						<span class="w-1 h-1 bg-transparent group-hover:bg-black rounded-full transition-colors"></span>
+						<span>Impact</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigateTo('about')"
+						class="nav-item flex items-center space-x-3 hover:text-black transition-colors group" data-target="about">
+						<span class="w-1 h-1 bg-transparent group-hover:bg-black rounded-full transition-colors"></span>
+						<span>About Me</span>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Social Footer -->
+			<div class="mt-12 md:absolute md:bottom-10 md:w-full md:pr-12 pt-8 border-t md:border-t-0 border-gray-100">
+				<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Connect</p>
+				<div class="flex space-x-5">
+					<a href="https://linkedin.com/in/riddhimohansharma" target="_blank"
+						class="text-gray-400 hover:text-[#0077b5] transition-colors" aria-label="LinkedIn"><i
+							class="fa-brands fa-linkedin text-xl"></i></a>
+					<!-- Updated X Handle -->
+					<a href="https://x.com/RiddhiMohanS" target="_blank" class="text-gray-400 hover:text-black transition-colors"
+						aria-label="X / Twitter"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+					<a href="https://medium.com" target="_blank" class="text-gray-400 hover:text-black transition-colors"
+						aria-label="Medium"><i class="fa-brands fa-medium text-xl"></i></a>
+				</div>
+			</div>
+		</nav>
+	</aside>
+
+	<!-- Main Content -->
+	<main class="flex-1 md:ml-72 p-6 md:p-16 lg:p-24 max-w-5xl mx-auto w-full">
+
+		<!-- HOME / HERO SECTION -->
+		<section id="home" class="page-section active">
+			<div class="max-w-3xl">
+				<div
+					class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full">
+					Product • Engineering • Strategy
+				</div>
+				<h1 class="text-4xl md:text-6xl font-bold text-black mb-8 tracking-tight leading-[1.1]">
+					Transformative technology leadership & cross-continental impact.
+				</h1>
+				<p class="text-xl text-gray-600 mb-10 leading-relaxed font-light">
+					I bridge the gap between complex engineering and strategic growth. With deep expertise in <span
+						class="text-black font-medium">AI, Identity, MarTech, and Healthcare</span>, I build scalable products and
+					mentor the next generation of tech leaders.
+				</p>
+				<div class="flex flex-wrap gap-4">
+					<button onclick="navigateTo('about')"
+						class="bg-black text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-all shadow-sm hover:shadow-md">
+						My Story
+					</button>
+					<button onclick="navigateTo('blog')"
+						class="text-black bg-white border border-gray-200 px-8 py-3 rounded-full text-sm font-medium hover:border-black transition-colors">
+						Read Insights
+					</button>
+				</div>
+			</div>
+
+			<div class="mt-24">
+				<div class="flex justify-between items-end mb-8 border-b border-gray-100 pb-4">
+					<h2 class="text-lg font-bold text-black tracking-tight">Recent Thoughts</h2>
+					<a href="#" onclick="navigateTo('blog')" class="text-sm text-gray-500 hover:text-black transition-colors">View
+						archive →</a>
+				</div>
+
+				<!-- Dynamic Feed Preview -->
+				<div class="grid gap-8">
+					<article class="group cursor-pointer" onclick="openArticle(1)">
+						<div class="flex flex-col md:flex-row gap-4 md:gap-8 items-baseline">
+							<time class="text-xs text-gray-400 font-mono shrink-0 w-24 uppercase">Latest</time>
+							<div>
+								<h3 class="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors mb-2">The Future
+									of Identity in AI</h3>
+								<p class="text-gray-600 leading-relaxed line-clamp-2">How zero-trust architectures and decentralized
+									identity are evolving in the age of generative artificial intelligence.</p>
+							</div>
+						</div>
+					</article>
+
+					<article class="group cursor-pointer" onclick="openArticle(2)">
+						<div class="flex flex-col md:flex-row gap-4 md:gap-8 items-baseline">
+							<time class="text-xs text-gray-400 font-mono shrink-0 w-24 uppercase">Strategy</time>
+							<div>
+								<h3 class="text-xl font-semibold text-black group-hover:text-blue-600 transition-colors mb-2">
+									Cross-Continental Engineering</h3>
+								<p class="text-gray-600 leading-relaxed line-clamp-2">Building and scaling high-performance teams across
+									different time zones and cultures for maximum impact.</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- BLOG SECTION -->
+		<section id="blog" class="page-section">
+			<div class="max-w-2xl">
+				<h1 class="text-4xl font-bold text-black mb-4 tracking-tight">Insights</h1>
+				<p class="text-gray-500 mb-16">Thoughts on leadership, AI, and strategic growth.</p>
+			</div>
+			<div class="grid gap-12" id="blog-list"></div>
+		</section>
+
+		<!-- ARTICLE VIEW -->
+		<section id="article-view" class="page-section">
+			<button onclick="navigateTo('blog')"
+				class="mb-10 text-sm text-gray-500 hover:text-black flex items-center gap-2 group">
+				<i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Insights
+			</button>
+			<article class="prose prose-slate prose-lg max-w-none text-gray-800">
+				<div id="article-content"></div>
+			</article>
+		</section>
+
+		<!-- IMPACT / PROJECTS SECTION -->
+		<section id="projects" class="page-section">
+			<div class="max-w-2xl">
+				<h1 class="text-4xl font-bold text-black mb-4 tracking-tight">Strategic Impact</h1>
+				<p class="text-gray-500 mb-16">Selected initiatives across AI, Identity, and Healthcare.</p>
+			</div>
+
+			<div class="grid grid-cols-1 gap-10">
+
+				<!-- Project 1: Identity -->
+				<div class="group border-t border-gray-100 pt-8 hover:border-black transition-colors">
+					<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+						<div class="flex-1">
+							<span class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 block">Identity &
+								Security</span>
+							<h3 class="text-2xl font-bold text-black mb-3 group-hover:text-blue-600 transition-colors">Global
+								Zero-Trust Architecture</h3>
+							<p class="text-gray-600 mb-4 leading-relaxed">
+								Led the architectural overhaul of an enterprise identity system serving 10M+ users. Implemented
+								zero-trust principles reducing unauthorized access incidents by 99% while streamlining SSO for global
+								employees.
+							</p>
+							<div class="flex gap-3 mt-4">
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">OAuth 2.0</span>
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Cybersecurity</span>
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Leadership</span>
+							</div>
+						</div>
+						<a href="#" class="opacity-0 group-hover:opacity-100 transition-opacity text-black"><i
+								class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+					</div>
+				</div>
+
+				<!-- Project 2: Healthcare AI -->
+				<div class="group border-t border-gray-100 pt-8 hover:border-black transition-colors">
+					<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+						<div class="flex-1">
+							<span class="text-xs font-bold text-green-600 uppercase tracking-wider mb-2 block">Healthcare & AI</span>
+							<h3 class="text-2xl font-bold text-black mb-3 group-hover:text-green-600 transition-colors">Predictive
+								Patient Analytics</h3>
+							<p class="text-gray-600 mb-4 leading-relaxed">
+								Spearheaded the product strategy for an AI-driven analytics platform. Utilized ML models to predict
+								patient readmission risks, enabling healthcare providers to intervene early and improve outcomes by 15%.
+							</p>
+							<div class="flex gap-3 mt-4">
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Machine Learning</span>
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Product Strategy</span>
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Healthcare</span>
+							</div>
+						</div>
+						<a href="#" class="opacity-0 group-hover:opacity-100 transition-opacity text-black"><i
+								class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+					</div>
+				</div>
+
+				<!-- Project 3: MarTech -->
+				<div class="group border-t border-gray-100 pt-8 hover:border-black transition-colors">
+					<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+						<div class="flex-1">
+							<span class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2 block">MarTech &
+								Growth</span>
+							<h3 class="text-2xl font-bold text-black mb-3 group-hover:text-purple-600 transition-colors">Real-Time
+								Bidding Engine</h3>
+							<p class="text-gray-600 mb-4 leading-relaxed">
+								Engineering management for a high-scale AdTech platform processing 50k queries per second. Optimized
+								latency to sub-millisecond levels, directly driving a 20% revenue increase through improved bid win
+								rates.
+							</p>
+							<div class="flex gap-3 mt-4">
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">High Scale</span>
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Cloud Infra</span>
+								<span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Engineering Mgmt</span>
+							</div>
+						</div>
+						<a href="#" class="opacity-0 group-hover:opacity-100 transition-opacity text-black"><i
+								class="fa-solid fa-arrow-up-right-from-square text-xl"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ABOUT SECTION -->
+		<section id="about" class="page-section">
+			<div class="max-w-3xl">
+				<h1 class="text-4xl font-bold text-black mb-8 tracking-tight">About Me</h1>
+
+				<!-- New Image Placeholder -->
+				<div class="mb-12">
+					<!-- USER TO DO: Replace 'src' with your actual image URL for the about page -->
+					<img src="https://via.placeholder.com/1200x400/F0F3F7/6B7280?text=Your+Professional+Photo+Here"
+						alt="Riddhi Sharma - Professional Profile"
+						class="w-full h-auto rounded-lg object-cover shadow-md border border-gray-100">
+				</div>
+
+				<div class="prose prose-lg text-gray-600 mb-12">
+					<p class="text-xl text-black font-medium leading-relaxed">
+						I am focused on transformative technology leadership, strategic growth, and cross-continental impact.
+					</p>
+					<p>
+						With a career spanning Product Management and Engineering Management, I have contributed to executive
+						thought leadership in **AI, Identity, MarTech, and Healthcare**. My passion lies not just in building
+						systems, but in building the teams and strategies that make those systems scalable and impactful.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-12 border-t border-gray-100 pt-12">
+					<div>
+						<h3 class="font-bold text-black mb-6 flex items-center gap-2">
+							<i class="fa-solid fa-bolt text-yellow-500"></i> Beyond the Code
+						</h3>
+						<ul class="space-y-4 text-sm text-gray-600">
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>Writing on LinkedIn & Medium about Strategy</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>Coaching & mentoring future tech leaders</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>Curating alumni & professional networking events</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>Volunteering with education & tech communities</span>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="font-bold text-black mb-6 flex items-center gap-2">
+							<i class="fa-regular fa-comment-dots text-blue-500"></i> Ask Me About
+						</h3>
+						<ul class="space-y-4 text-sm text-gray-600">
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>Technology Leadership & Executive Growth</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>AI Strategy & Implementation</span>
+							</li>
+							<li class="flex gap-3">
+								<span class="text-gray-400">•</span>
+								<span>Mentoring & Professional Networking</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Contact Box -->
+				<div class="mt-16 bg-gray-50 p-8 rounded-2xl border border-gray-100">
+					<h3 class="text-xl font-bold text-black mb-2">Let's Connect</h3>
+					<p class="text-gray-600 mb-6">Always open to discussing transformative tech and leadership opportunities.</p>
+					<div class="flex flex-wrap gap-4">
+						<a href="https://linkedin.com/in/riddhimohansharma" target="_blank"
+							class="bg-[#0077b5] text-white px-6 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity">
+							<i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+						</a>
+						<a href="https://medium.com" target="_blank"
+							class="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:opacity-80 transition-opacity">
+							<i class="fa-brands fa-medium mr-2"></i> Medium
+						</a>
+						<a href="mailto:contact@riddhimohansharma.com"
+							class="bg-white border border-gray-300 text-gray-700 px-6 py-2 rounded-md text-sm font-medium hover:border-black hover:text-black transition-colors">
+							Email Me
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<script>
+		// Mobile Menu Logic
+		const menuBtn = document.getElementById('menu-btn');
+		const mobileMenu = document.getElementById('mobile-menu');
+		let isMenuOpen = false;
+
+		menuBtn.addEventListener('click', () => {
+			isMenuOpen = !isMenuOpen;
+			if (isMenuOpen) {
+				mobileMenu.classList.remove('hidden');
+				setTimeout(() => {
+					mobileMenu.classList.remove('max-h-0', 'opacity-0');
+					mobileMenu.classList.add('max-h-screen', 'opacity-100');
+				}, 10);
+			} else {
+				mobileMenu.classList.add('max-h-0', 'opacity-0');
+				mobileMenu.classList.remove('max-h-screen', 'opacity-100');
+				setTimeout(() => {
+					mobileMenu.classList.add('hidden');
+				}, 300);
+			}
+		});
+
+		// Page Navigation Logic
+		function navigateTo(pageId) {
+			// Scroll top
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+
+			// Switch Sections
+			document.querySelectorAll('.page-section').forEach(el => {
+				el.classList.remove('active');
+			});
+			document.getElementById(pageId).classList.add('active');
+
+			// Update Active State in Sidebar
+			document.querySelectorAll('.nav-item').forEach(el => {
+				el.classList.remove('text-black', 'font-semibold');
+				el.classList.add('text-gray-500');
+				// Reset dots
+				const dot = el.querySelector('span.w-1');
+				if (dot) dot.classList.replace('bg-black', 'bg-transparent');
+			});
+
+			// Set Active
+			const activeLinks = document.querySelectorAll(`[data-target="${pageId}"]`);
+			activeLinks.forEach(link => {
+				link.classList.remove('text-gray-500');
+				link.classList.add('text-black', 'font-semibold');
+				const dot = link.querySelector('span.w-1');
+				if (dot) dot.classList.replace('bg-transparent', 'bg-black');
+			});
+
+			if (window.innerWidth < 768 && isMenuOpen) {
+				menuBtn.click();
+			}
+		}
+
+		// --- CONTENT DATA ---
+		const blogPosts = [
+			{
+				id: 1,
+				title: "The Future of Identity in AI",
+				date: "Nov 15, 2023",
+				readTime: "6 min read",
+				tag: "Thought Leadership",
+				summary: "How zero-trust architectures and decentralized identity are evolving in the age of generative artificial intelligence.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">The Future of Identity in AI</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Nov 15, 2023</span>
+                        <span>•</span>
+                        <span>Identity & Security</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">As generative AI reshapes the digital landscape, the concept of 'Identity' is facing its biggest stress test yet. How do we verify humanity in a sea of synthetic content?</p>
+                        <p>In this deep dive, I explore the intersection of <strong>Zero-Trust Architecture</strong> and AI agents. We are moving from user-centric identity to entity-centric identity, where software agents require verified credentials just as humans do.</p>
+                        <h3 class="text-xl font-bold text-black mt-8">The Three Pillars of Modern Identity</h3>
+                        <ul class="list-disc pl-5 space-y-2 marker:text-gray-400">
+                            <li><strong>Verification:</strong> Moving beyond passwords to biometric and behavioral analysis.</li>
+                            <li><strong>Privacy:</strong> Leveraging Zero-Knowledge Proofs (ZKPs) to prove eligibility without revealing data.</li>
+                            <li><strong>Governance:</strong> Managing the lifecycle of AI agent permissions.</li>
+                        </ul>
+                        <p>Leading product strategy in this space requires balancing friction with security. The winners in the next decade will be those who make high-assurance identity invisible to the end user.</p>
+                    </div>
+                `
+			},
+			{
+				id: 2,
+				title: "Cross-Continental Engineering",
+				date: "Oct 02, 2023",
+				readTime: "5 min read",
+				tag: "Strategy",
+				summary: "Building and scaling high-performance teams across different time zones and cultures for maximum impact.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">Cross-Continental Engineering</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Oct 02, 2023</span>
+                        <span>•</span>
+                        <span>Management</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">The sun never sets on a truly global engineering team. But without the right culture, timezone differences become bottlenecks rather than force multipliers.</p>
+                        <p>Having led teams across the US, Europe, and Asia, I've found that <strong>asynchronous documentation</strong> is the glue that holds distributed teams together. It’s not just about writing code; it’s about writing the *context* around the code.</p>
+                        <h3 class="text-xl font-bold text-black mt-8">Strategies for Success</h3>
+                        <p>1. <strong>The Handshake Protocol:</strong> Ensure clear handoffs between timezones to maintain 24/7 velocity.</p>
+                        <p>2. <strong>Cultural Intelligence:</strong> Understanding communication styles is just as important as technical prowess. High-context vs. low-context cultures require different management approaches.</p>
+                        <p>Ultimately, cross-continental impact is about creating a shared vision that transcends geography.</p>
+                    </div>
+                `
+			},
+			{
+				id: 3,
+				title: "Mentoring the Next Generation",
+				date: "Sep 10, 2023",
+				readTime: "4 min read",
+				tag: "Community",
+				summary: "Why senior leaders must prioritize coaching and how to build effective mentorship loops.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">Mentoring the Next Generation</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Sep 10, 2023</span>
+                        <span>•</span>
+                        <span>Leadership</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">Technical skills have a half-life of about 5 years. Leadership skills last a lifetime. This is why I prioritize mentoring.</p>
+                        <p>Whether it's volunteering with education communities or 1:1 coaching, the goal is to help emerging leaders navigate the ambiguity of the modern tech landscape. We discuss not just 'how' to build, but 'why' we build.</p>
+                    </div>
+                `
+			}
+		];
+
+		// Render Logic
+		function renderBlogList() {
+			const listContainer = document.getElementById('blog-list');
+			listContainer.innerHTML = blogPosts.map(post => `
+                <article class="group cursor-pointer block" onclick="openArticle(${post.id})">
+                    <div class="border-t border-gray-100 pt-8">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-3">
+                            <div class="flex items-center gap-2 mb-2 sm:mb-0">
+                                <span class="px-3 py-1 bg-gray-50 text-[10px] uppercase tracking-wide font-bold text-gray-500 rounded-full">${post.tag}</span>
+                                <span class="text-xs text-gray-400">${post.readTime}</span>
+                            </div>
+                            <time class="text-xs text-gray-400 font-mono uppercase">${post.date}</time>
+                        </div>
+                        <h2 class="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors mb-3">${post.title}</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">${post.summary}</p>
+                        <div class="flex items-center gap-2 text-sm font-medium text-black group-hover:translate-x-1 transition-transform">
+                            Read Article <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+		}
+
+		function openArticle(id) {
+			const article = blogPosts.find(p => p.id === id);
+			if (article) {
+				document.getElementById('article-content').innerHTML = article.content;
+				navigateTo('article-view');
+			}
+		}
+
+		// Init
+		renderBlogList();
+
+		// Check URL hash for direct navigation on load
+		/* window.addEventListener('load', () => {
+				 const hash = window.location.hash.substring(1);
+				 if(hash && ['home','blog','projects','about'].includes(hash)) {
+						 navigateTo(hash);
+				 }
+		}); */
+	</script>
+</body>
+
+</html>
