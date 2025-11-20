@@ -12,6 +12,12 @@
 
 	<title>Riddhi Mohan Sharma | Tech Leadership & AI Strategy</title>
 
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon"
+		href="https://raw.githubusercontent.com/riddhimohan/riddhimohan.github.io/main/assets/images/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon"
+		href="https://raw.githubusercontent.com/riddhimohan/riddhimohan.github.io/main/assets/images/favicon.ico">
+
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<!-- Inter Font for professional minimalism -->
@@ -248,11 +254,23 @@
 
 		<!-- BLOG SECTION -->
 		<section id="blog" class="page-section">
-			<div class="max-w-2xl">
+			<div class="max-w-2xl mb-8">
 				<h1 class="text-4xl font-bold text-black mb-4 tracking-tight">Insights</h1>
-				<p class="text-gray-500 mb-16">Thoughts on leadership, AI, and strategic growth.</p>
+				<p class="text-gray-500 mb-6">Thoughts on leadership, AI, and strategic growth.</p>
+
+				<!-- Search Bar -->
+				<div class="relative">
+					<input type="text" id="blog-search" placeholder="Search insights..."
+						class="w-full px-4 py-3 pl-12 border border-gray-200 rounded-lg focus:outline-none focus:border-black transition-colors"
+						oninput="filterBlogPosts()">
+					<i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+				</div>
 			</div>
+
 			<div class="grid gap-12" id="blog-list"></div>
+
+			<!-- Pagination -->
+			<div id="pagination" class="mt-12 flex justify-center items-center gap-2"></div>
 		</section>
 
 		<!-- ARTICLE VIEW -->
@@ -545,7 +563,7 @@
                     </div>
                     <div class="space-y-6 text-gray-800 leading-relaxed">
                         <p class="text-xl font-light">The sun never sets on a truly global engineering team. But without the right culture, timezone differences become bottlenecks rather than force multipliers.</p>
-                        <p>Having led teams across the US, Europe, and Asia, I've found that <strong>asynchronous documentation</strong> is the glue that holds distributed teams together. It’s not just about writing code; it’s about writing the *context* around the code.</p>
+                        <p>Having led teams across the US, Europe, and Asia, I've found that <strong>asynchronous documentation</strong> is the glue that holds distributed teams together. It's not just about writing code; it's about writing the *context* around the code.</p>
                         <h3 class="text-xl font-bold text-black mt-8">Strategies for Success</h3>
                         <p>1. <strong>The Handshake Protocol:</strong> Ensure clear handoffs between timezones to maintain 24/7 velocity.</p>
                         <p>2. <strong>Cultural Intelligence:</strong> Understanding communication styles is just as important as technical prowess. High-context vs. low-context cultures require different management approaches.</p>
@@ -572,30 +590,220 @@
                         <p>Whether it's volunteering with education communities or 1:1 coaching, the goal is to help emerging leaders navigate the ambiguity of the modern tech landscape. We discuss not just 'how' to build, but 'why' we build.</p>
                     </div>
                 `
+			},
+			{
+				id: 4,
+				title: "Building Resilient Systems",
+				date: "Aug 20, 2023",
+				readTime: "7 min read",
+				tag: "Engineering",
+				summary: "Lessons learned from architecting systems that handle millions of requests per day.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">Building Resilient Systems</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Aug 20, 2023</span>
+                        <span>•</span>
+                        <span>Engineering</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">Resilience isn't about preventing failures—it's about designing systems that gracefully handle them.</p>
+                        <p>In my experience scaling high-throughput systems, the key is implementing defense in depth: circuit breakers, rate limiting, graceful degradation, and comprehensive observability.</p>
+                    </div>
+                `
+			},
+			{
+				id: 5,
+				title: "The Art of Technical Decision Making",
+				date: "Jul 15, 2023",
+				readTime: "5 min read",
+				tag: "Strategy",
+				summary: "Framework for making technology choices that balance innovation with pragmatism.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">The Art of Technical Decision Making</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Jul 15, 2023</span>
+                        <span>•</span>
+                        <span>Strategy</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">Every technical decision is a bet on the future. The question is: how do you place smart bets?</p>
+                        <p>I use a framework that considers: team expertise, maintenance burden, ecosystem maturity, and most importantly—reversibility. The best decisions are the ones you can undo.</p>
+                    </div>
+                `
+			},
+			{
+				id: 6,
+				title: "Product-Led Growth in Enterprise",
+				date: "Jun 28, 2023",
+				readTime: "6 min read",
+				tag: "Product",
+				summary: "How to implement PLG strategies in traditionally sales-led enterprise environments.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">Product-Led Growth in Enterprise</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Jun 28, 2023</span>
+                        <span>•</span>
+                        <span>Product</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">Product-led growth isn't just for B2C. Enterprise software can benefit from self-service and viral adoption.</p>
+                        <p>The key is identifying the right entry point—often a developer tool or API—that provides immediate value and creates advocates within the organization.</p>
+                    </div>
+                `
+			},
+			{
+				id: 7,
+				title: "AI Ethics in Practice",
+				date: "May 12, 2023",
+				readTime: "8 min read",
+				tag: "Thought Leadership",
+				summary: "Moving beyond abstract principles to concrete practices for responsible AI development.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">AI Ethics in Practice</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>May 12, 2023</span>
+                        <span>•</span>
+                        <span>Thought Leadership</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">Everyone talks about AI ethics. Few know how to implement it in production systems.</p>
+                        <p>From bias testing in training data to explainability frameworks, I share the practical steps we took to build ethical AI systems at scale.</p>
+                    </div>
+                `
+			},
+			{
+				id: 8,
+				title: "The Future of Work",
+				date: "Apr 05, 2023",
+				readTime: "5 min read",
+				tag: "Community",
+				summary: "How AI and automation will reshape tech careers and what it means for leadership.",
+				content: `
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-black">The Future of Work</h1>
+                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-8 font-mono border-b border-gray-100 pb-6">
+                        <span>Apr 05, 2023</span>
+                        <span>•</span>
+                        <span>Community</span>
+                    </div>
+                    <div class="space-y-6 text-gray-800 leading-relaxed">
+                        <p class="text-xl font-light">AI won't replace engineers—it will amplify them. But only if we adapt.</p>
+                        <p>The future belongs to those who can blend technical depth with strategic thinking, human empathy with machine efficiency.</p>
+                    </div>
+                `
 			}
 		];
 
+		// Pagination State
+		let currentPage = 1;
+		const postsPerPage = 5;
+		let filteredPosts = [...blogPosts];
+
 		// Render Logic
 		function renderBlogList() {
+			const startIdx = (currentPage - 1) * postsPerPage;
+			const endIdx = startIdx + postsPerPage;
+			const postsToShow = filteredPosts.slice(startIdx, endIdx);
+
 			const listContainer = document.getElementById('blog-list');
-			listContainer.innerHTML = blogPosts.map(post => `
-                <article class="group cursor-pointer block" onclick="openArticle(${post.id})">
-                    <div class="border-t border-gray-100 pt-8">
-                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-3">
-                            <div class="flex items-center gap-2 mb-2 sm:mb-0">
-                                <span class="px-3 py-1 bg-gray-50 text-[10px] uppercase tracking-wide font-bold text-gray-500 rounded-full">${post.tag}</span>
-                                <span class="text-xs text-gray-400">${post.readTime}</span>
-                            </div>
-                            <time class="text-xs text-gray-400 font-mono uppercase">${post.date}</time>
-                        </div>
-                        <h2 class="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors mb-3">${post.title}</h2>
-                        <p class="text-gray-600 mb-4 leading-relaxed">${post.summary}</p>
-                        <div class="flex items-center gap-2 text-sm font-medium text-black group-hover:translate-x-1 transition-transform">
-                            Read Article <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </div>
-                    </div>
-                </article>
-            `).join('');
+
+			if (postsToShow.length === 0) {
+				listContainer.innerHTML = '<p class="text-gray-500 text-center py-12">No posts found matching your search.</p>';
+			} else {
+				listContainer.innerHTML = postsToShow.map(post => `
+					<article class="group cursor-pointer block" onclick="openArticle(${post.id})">
+						<div class="border-t border-gray-100 pt-8">
+							<div class="flex flex-col sm:flex-row justify-between sm:items-center mb-3">
+								<div class="flex items-center gap-2 mb-2 sm:mb-0">
+									<span class="px-3 py-1 bg-gray-50 text-[10px] uppercase tracking-wide font-bold text-gray-500 rounded-full">${post.tag}</span>
+									<span class="text-xs text-gray-400">${post.readTime}</span>
+								</div>
+								<time class="text-xs text-gray-400 font-mono uppercase">${post.date}</time>
+							</div>
+							<h2 class="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors mb-3">${post.title}</h2>
+							<p class="text-gray-600 mb-4 leading-relaxed">${post.summary}</p>
+							<div class="flex items-center gap-2 text-sm font-medium text-black group-hover:translate-x-1 transition-transform">
+								Read Article <i class="fa-solid fa-arrow-right text-xs"></i>
+							</div>
+						</div>
+					</article>
+				`).join('');
+			}
+
+			renderPagination();
+		}
+
+		function renderPagination() {
+			const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+			const paginationContainer = document.getElementById('pagination');
+
+			if (totalPages <= 1) {
+				paginationContainer.innerHTML = '';
+				return;
+			}
+
+			let paginationHTML = '';
+
+			// Previous button
+			paginationHTML += `
+				<button
+					onclick="changePage(${currentPage - 1})"
+					${currentPage === 1 ? 'disabled' : ''}
+					class="px-3 py-2 rounded-md text-sm font-medium transition-colors ${currentPage === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-100'}"
+				>
+					<i class="fa-solid fa-chevron-left"></i>
+				</button>
+			`;
+
+			// Page numbers
+			for (let i = 1; i <= totalPages; i++) {
+				if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+					paginationHTML += `
+						<button
+							onclick="changePage(${i})"
+							class="px-4 py-2 rounded-md text-sm font-medium transition-colors ${i === currentPage ? 'bg-black text-white' : 'text-gray-700 hover:bg-gray-100'}"
+						>
+							${i}
+						</button>
+					`;
+				} else if (i === currentPage - 2 || i === currentPage + 2) {
+					paginationHTML += '<span class="px-2 text-gray-400">...</span>';
+				}
+			}
+
+			// Next button
+			paginationHTML += `
+				<button
+					onclick="changePage(${currentPage + 1})"
+					${currentPage === totalPages ? 'disabled' : ''}
+					class="px-3 py-2 rounded-md text-sm font-medium transition-colors ${currentPage === totalPages ? 'text-gray-300 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-100'}"
+				>
+					<i class="fa-solid fa-chevron-right"></i>
+				</button>
+			`;
+
+			paginationContainer.innerHTML = paginationHTML;
+		}
+
+		function changePage(page) {
+			const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+			if (page < 1 || page > totalPages) return;
+
+			currentPage = page;
+			renderBlogList();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+
+		function filterBlogPosts() {
+			const searchTerm = document.getElementById('blog-search').value.toLowerCase();
+
+			filteredPosts = blogPosts.filter(post =>
+				post.title.toLowerCase().includes(searchTerm) ||
+				post.summary.toLowerCase().includes(searchTerm) ||
+				post.tag.toLowerCase().includes(searchTerm)
+			);
+
+			currentPage = 1; // Reset to first page on new search
+			renderBlogList();
 		}
 
 		function openArticle(id) {
@@ -619,8 +827,24 @@
 	</script>
 </body>
 
-<footer>
-	<p>Riddhi Mohan &copy; 2025</p>
+<footer class="md:ml-72 border-t border-gray-100 py-8 px-6 md:px-16">
+	<div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+		<p class="text-sm text-gray-500">&copy; 2025 Riddhi Mohan Sharma. All rights reserved.</p>
+		<div class="flex items-center gap-4">
+			<a href="https://linkedin.com/in/riddhimohansharma" target="_blank"
+				class="text-gray-400 hover:text-[#0077b5] transition-colors" aria-label="LinkedIn">
+				<i class="fa-brands fa-linkedin text-lg"></i>
+			</a>
+			<a href="https://x.com/RiddhiMohanS" target="_blank" class="text-gray-400 hover:text-black transition-colors"
+				aria-label="X / Twitter">
+				<i class="fa-brands fa-x-twitter text-lg"></i>
+			</a>
+			<a href="https://medium.com/@riddhimohansharma" target="_blank"
+				class="text-gray-400 hover:text-black transition-colors" aria-label="Medium">
+				<i class="fa-brands fa-medium text-lg"></i>
+			</a>
+		</div>
+	</div>
 </footer>
 
 </html>
